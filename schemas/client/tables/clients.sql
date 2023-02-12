@@ -5,7 +5,7 @@ create table clients (
 
     name varchar(100) not null,
     slug common.slug_text,
-    description text
+    description text,
 
     constraint pk_clients
         primary key (id),

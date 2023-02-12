@@ -18,3 +18,7 @@ create table countries (
     constraint u_countries_3
         unique (official_name_en)
 );
+
+-- https://www.postgresql.org/docs/12/app-psql.html
+-- countries
+\copy common.countries (official_name_en,iso_3166_1_alpha_2,iso_3166_1_alpha_3,iso_3166_1_numeric,iso_4217_currency_alphabetic_code,iso_4217_currency_country_name,iso_4217_currency_minor_unit,iso_4217_currency_name,iso_4217_currency_numeric_code) from '/docker-entrypoint-initdb.d/init/countries.csv' with delimiter ',' csv header quote '"'

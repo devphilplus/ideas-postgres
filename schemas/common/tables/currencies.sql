@@ -12,3 +12,26 @@ create table currencies (
     constraint u_currencies_2
         unique (unit_text)
 );
+
+
+-- https://www.postgresql.org/docs/12/app-psql.html
+-- currencies
+
+create sequence if not exists seq_currency as int
+;
+
+alter table if exists currencies
+alter column id set default nextval('seq_currency')
+;
+
+
+\copy common.currencies (currency, unit_text, symbol) from '/docker-entrypoint-initdb.d/init/currencies.csv' with delimiter ',' csv header quote '"'; 
+
+
+
+alter table if exists currencies
+alter column id drop default
+;
+
+drop sequence seq_currency
+;
