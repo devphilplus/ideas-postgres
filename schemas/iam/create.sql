@@ -4,4 +4,5 @@
 create schema iam;
 set schema 'iam';
 
+\ir tables/registrations.sql
 \ir tables/users.sql
