@@ -9,7 +9,5 @@ create table users (
     email_verified boolean,
 
     constraint pk_users
-        primary key (id),
-    constraint u_users_1
-        unique (people_id)
+        primary key (id)
 );

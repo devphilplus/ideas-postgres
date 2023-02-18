@@ -8,4 +8,4 @@ set schema 'iam';
 \ir tables/users.sql
 
 
-\ir procs/user_register.sql
+\ir procs/registrations/register.sql
