@@ -9,3 +9,4 @@ set schema 'iam';
 
 
 \ir procs/registrations/register.sql
+\ir procs/registrations/register_get_info.sql

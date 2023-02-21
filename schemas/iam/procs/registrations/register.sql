@@ -1,7 +1,7 @@
 create procedure register(
     p_id iam.registrations.id%type,
     p_email iam.registrations.email%type,
-    p_token iam.registrations.toke%type
+    p_token iam.registrations.token%type
 )
 language plpgsql
 as $$
