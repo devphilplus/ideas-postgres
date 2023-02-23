@@ -6,8 +6,6 @@ create table users (
     email common.email_address,
     pw text not null,
 
-    email_verified boolean,
-
     constraint pk_users
         primary key (id)
 );

@@ -8,10 +8,12 @@ as $$
 begin
     insert into iam.registrations (
         id,
+        active,
         email,
         token
     ) values (
         p_id,
+        true,
         p_email,
         p_token
     );
