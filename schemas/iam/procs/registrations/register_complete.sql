@@ -9,7 +9,7 @@ declare
     v_email common.email_address; 
 begin
     select
-        registration_id,
+        id,
         email
         into
             v_registration_id,
@@ -30,10 +30,12 @@ begin
 
     insert into iam.users (
         id,
+        active,
         email,
         pw
     ) values (
         v_registration_id,
+        true,
         v_email,
         public.crypt(p_pw, public.gen_salt('md5'))
     );
