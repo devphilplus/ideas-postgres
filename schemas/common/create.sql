@@ -37,3 +37,7 @@ create domain slug_text
 \ir tables/genders.sql
 \ir tables/ethnicity.sql
 \ir tables/marital_states.sql
+
+
+-- procs
+\ir procs/countries/countries_fetch.sql
