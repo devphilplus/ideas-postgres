@@ -19,3 +19,5 @@ begin
     );
 end
 $$;
+
+comment on procedure register is 'register unverified account';

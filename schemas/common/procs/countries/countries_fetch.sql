@@ -18,3 +18,5 @@ begin
     ;
 end
 $$;
+
+comment on procedure countries_fetch is 'retrieve all countries';

@@ -22,3 +22,5 @@ begin
     ;
 end
 $$;
+
+comment on function register_get_info is 'retrieve info on unverified account from token';

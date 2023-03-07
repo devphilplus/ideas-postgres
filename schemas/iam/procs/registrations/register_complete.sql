@@ -41,3 +41,5 @@ begin
     );
 end
 $$;
+
+comment on procedure register_complete is 'create user account, set registration email as verified';

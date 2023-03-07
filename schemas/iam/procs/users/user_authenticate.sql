@@ -25,3 +25,5 @@ begin
             return false;
 end
 $$;
+
+comment on function user_authenticate is 'authenticate user from email and password';
