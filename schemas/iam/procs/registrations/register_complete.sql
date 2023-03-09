@@ -21,6 +21,11 @@ begin
         and verified is null
     ;
 
+    if v_registration_id is null then
+    begin
+        raise exception 'unknown registration token: %', p_token;
+    end;
+
     update iam.registrations set
         active = false,
         verified = now() at time zone 'utc'
@@ -28,6 +33,7 @@ begin
         id = v_registration_id
     ;
 
+    -- create user account
     insert into iam.users (
         id,
         active,
@@ -38,6 +44,35 @@ begin
         true,
         v_email,
         public.crypt(p_pw, public.gen_salt('md5'))
+    );
+
+    -- add record to people.people
+    insert into people.people (
+        id,
+        active,
+        given_name,
+        middle_name,
+        family_name
+    ) values (
+        v_registration_id,
+        true,
+        '',
+        '',
+        ''
+    );
+
+    insert into people.contact_emails (
+        id,
+        active,
+        people_id,
+        email,
+        verified
+    ) values (
+        v_registration_id,
+        true,
+        v_registration_id,
+        v_email,
+        true
     );
 end
 $$;
