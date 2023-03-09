@@ -41,3 +41,5 @@ begin
     );
 end
 $$;
+
+comment on procedure people_add is 'add a record to the people table'

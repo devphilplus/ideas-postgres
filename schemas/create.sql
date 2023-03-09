@@ -3,6 +3,7 @@
 \ir client/tables.sql
 \ir iam/tables.sql
 \ir accounting/tables.sql
+\ir people/tables.sql
 
 
 
@@ -11,3 +12,4 @@
 \ir client/procs.sql
 \ir iam/procs.sql
 \ir accounting/procs.sql
+\ir people/procs.sql

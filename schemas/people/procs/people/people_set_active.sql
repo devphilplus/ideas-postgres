@@ -2,7 +2,7 @@ create procedure people_set_active(
     p_people_id people.people.id%type,
     p_active people.people.active%type
 )
-language plpsql
+language plpgsql
 as $$
 begin
     update people.people set
@@ -12,3 +12,5 @@ begin
     ;
 end
 $$;
+
+comment on procedure people_set_active is 'set people record as active';

@@ -8,7 +8,6 @@ create table contact_addresses (
     street text,
     country_id int not null,
 
-    constraint 
     constraint fk_contact_addresses_1
         foreign key (country_id)
         references common.countries (iso_3166_1_numeric)
