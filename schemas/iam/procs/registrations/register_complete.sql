@@ -9,22 +9,21 @@ declare
     v_email common.email_address; 
 begin
     select
-        id,
-        email
+        a.id,
+        a.email
         into
             v_registration_id,
             v_email
-    from iam.registrations
+    from iam.registrations a
     where
-        token = p_token
-        and active = true
-        and verified is null
+        a.token = p_token
+        and a.active = true
+        and a.verified is null
     ;
 
     if v_registration_id is null then
-    begin
         raise exception 'unknown registration token: %', p_token;
-    end;
+    end if;
 
     update iam.registrations set
         active = false,

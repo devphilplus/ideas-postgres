@@ -2,7 +2,7 @@ create function user_by_email(
     p_email iam.users.email%type
 )
 returns table (
-    email common.email_address%type,
+    email iam.users.email%type,
     given_name people.people.given_name%type,
     middle_name people.people.middle_name%type,
     family_name people.people.family_name%type,

@@ -1,7 +1,7 @@
 create or replace function countries_fetch()
 returns table (
     id common.countries.iso_3166_1_numeric%type,
-    name common.countries.official_name%type,
+    name common.countries.official_name_en%type,
     iso_3166_1_alpha_2 common.countries.iso_3166_1_alpha_2%type,
     iso_3166_1_alpha_3 common.countries.iso_3166_1_alpha_3%type
 )
@@ -19,4 +19,4 @@ begin
 end
 $$;
 
-comment on procedure countries_fetch is 'retrieve all countries';
+comment on function countries_fetch is 'retrieve all countries';
