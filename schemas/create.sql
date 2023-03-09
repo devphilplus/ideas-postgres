@@ -1,4 +1,13 @@
-\ir common/create.sql
-\ir client/create.sql
-\ir iam/create.sql
-\ir accounting/create.sql
+-- tables
+\ir common/tables.sql
+\ir client/tables.sql
+\ir iam/tables.sql
+\ir accounting/tables.sql
+
+
+
+-- procs
+\ir common/procs.sql
+\ir client/procs.sql
+\ir iam/procs.sql
+\ir accounting/procs.sql

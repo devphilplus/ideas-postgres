@@ -4,7 +4,6 @@
 create schema common;
 set schema 'common';
 
-
 -- http://www.regular-expressions.info/email.html
 create domain email_address
   text
@@ -28,8 +27,6 @@ create domain slug_text
 );
 
 
-
--- tables
 \ir tables/countries.sql
 \ir tables/currencies.sql
 \ir tables/dimensions.sql
@@ -37,7 +34,3 @@ create domain slug_text
 \ir tables/genders.sql
 \ir tables/ethnicity.sql
 \ir tables/marital_states.sql
-
-
--- procs
-\ir procs/countries/countries_fetch.sql
