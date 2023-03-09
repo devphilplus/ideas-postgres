@@ -15,3 +15,5 @@ create table clients (
     constraint u_clients_2
         unique (slug)
 );
+
+comment on table clients is 'table of clients';

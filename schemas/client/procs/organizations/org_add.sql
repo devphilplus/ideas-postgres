@@ -23,3 +23,5 @@ begin
     );
 end
 $$;
+
+comment on procedure org_add is 'add a record to organization table';

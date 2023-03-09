@@ -19,3 +19,5 @@ create table organizations (
         foreign key (client_id)
         references client.clients (id)
 );
+
+comment on table organizations is 'table of organizations';

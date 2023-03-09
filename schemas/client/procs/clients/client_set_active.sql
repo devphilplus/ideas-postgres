@@ -12,3 +12,5 @@ begin
     ;
 end
 $$;
+
+comment on procedure client_set_active is 'set client record to active';

@@ -16,3 +16,5 @@ begin
     ;
 end
 $$;
+
+comment on procedure org_set_property is 'update organization record';

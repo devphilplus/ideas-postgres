@@ -12,3 +12,5 @@ begin
     ;
 end
 $$;
+
+comment on procedure org_set_active is 'set organization record to active';

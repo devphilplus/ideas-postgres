@@ -16,3 +16,5 @@ begin
     ;
 end
 $$;
+
+comment on procedure client_set_property is 'update client record';

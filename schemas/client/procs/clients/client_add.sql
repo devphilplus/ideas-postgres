@@ -20,3 +20,5 @@ begin
     );
 end
 $$;
+
+comment on procedure client_add is 'add client record';
