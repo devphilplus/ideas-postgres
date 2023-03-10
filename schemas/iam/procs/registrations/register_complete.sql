@@ -73,6 +73,16 @@ begin
         v_email,
         true
     );
+
+    commit transaction;
+
+    exception
+        when no_data_found then
+            rollback;
+            raise;
+        when integrity_constraint_violation then
+            rollback;
+            raise;
 end
 $$;
 
