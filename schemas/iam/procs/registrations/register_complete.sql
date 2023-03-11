@@ -68,7 +68,7 @@ begin
         true
     );
 
-    commit transaction;
+    commit;
 
     exception
         when no_data_found then

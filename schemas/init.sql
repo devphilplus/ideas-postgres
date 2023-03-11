@@ -16,11 +16,21 @@ begin
         'default client'
     );
 
+    call client.client_set_active(
+        default_client_id,
+        true
+    );
+
     -- create admin user id
     call iam.user_add(
         admin_user_id,
         'admin@default.com',
         'admin'
+    );
+
+    call iam.user_set_active(
+        admin_user_id,
+        true
     );
 end
 $$;

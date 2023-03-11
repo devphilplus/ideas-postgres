@@ -23,7 +23,7 @@ create domain slug_text
     and
     length(value) < 254
     and
-    value ~ '[0-9a-z-_]'
+    value ~ '[0-9a-z\-_]'
 );
 
 
