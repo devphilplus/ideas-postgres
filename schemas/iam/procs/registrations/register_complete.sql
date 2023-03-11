@@ -33,16 +33,10 @@ begin
     ;
 
     -- create user account
-    insert into iam.users (
-        id,
-        active,
-        email,
-        pw
-    ) values (
+    call iam.user_add(
         v_registration_id,
-        true,
         v_email,
-        public.crypt(p_pw, public.gen_salt('md5'))
+        p_pw
     );
 
     -- add record to people.people
