@@ -31,6 +31,7 @@ begin
         true
     );
 
+    -- add people record
     call people.people_add(
         test_user_id,
         'test',
@@ -38,9 +39,26 @@ begin
         'test',
         '',
         '',
-        1, -- male
-        2,
-        2
+        1::smallint, -- male
+        2::smallint,
+        2::smallint
+    );
+
+    call people.people_set_active(
+        test_user_id,
+        true
+    );
+
+    -- add contact email record
+    call people.contact_email_add(
+        test_user_id,
+        test_user_id,
+        'test@mailinator.com'
+    );
+
+    call people.contact_email_set_active(
+        test_user_id,
+        true
     );
 end
 $$;
