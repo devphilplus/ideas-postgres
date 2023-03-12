@@ -30,6 +30,18 @@ begin
         test_user_id,
         true
     );
+
+    call people.people_add(
+        test_user_id,
+        'test',
+        'test',
+        'test',
+        '',
+        '',
+        1, -- male
+        2,
+        2
+    );
 end
 $$;
 
