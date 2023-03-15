@@ -16,7 +16,7 @@ declare
     user_id iam.users.id%type;
 begin
     select
-        id into user_id
+        a.id into user_id
     from iam.users a
     where
         a.email = p_email
