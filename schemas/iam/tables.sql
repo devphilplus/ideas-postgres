@@ -6,3 +6,4 @@ set schema 'iam';
 
 \ir tables/registrations.sql
 \ir tables/users.sql
+\ir tables/user_clients.sql

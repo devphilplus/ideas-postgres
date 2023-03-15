@@ -12,3 +12,6 @@ set schema 'iam';
 \ir procs/users/user_set_pw.sql
 \ir procs/users/user_authenticate.sql
 \ir procs/users/user_by_email.sql
+
+\ir procs/user_clients/user_client_add.sql
+\ir procs/user_clients/user_client_set_active.sql
