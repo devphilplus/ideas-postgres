@@ -5,6 +5,7 @@ returns table (
     id client.clients.id%type,
     name client.clients.name%type
 )
+language plpgsql
 as $$
 begin
     return query
