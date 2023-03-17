@@ -1,7 +1,7 @@
 create function client_by_name(
     p_name client.clients.name%type
 )
-return table (
+returns table (
     id client.clients.id%type,
     name client.clients.name%type
 )
