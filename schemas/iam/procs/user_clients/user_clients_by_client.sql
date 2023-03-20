@@ -26,4 +26,4 @@ end
 $$;
 
 
-comment on procedure user_clients_by_client is 'get users associated with client';
+comment on function user_clients_by_client is 'get users associated with client';
