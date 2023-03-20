@@ -3,6 +3,7 @@ create function user_by_email(
 )
 returns table (
     id iam.users.id%type,
+    active: iam.users.active%type,
     email iam.users.email%type,
     given_name people.people.given_name%type,
     middle_name people.people.middle_name%type,
@@ -25,6 +26,7 @@ begin
     return query
     select
         a.id,
+        a.active,
         p_email,
         a.given_name,
         a.middle_name,

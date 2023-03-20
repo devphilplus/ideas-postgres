@@ -3,7 +3,8 @@ create function user_clients_by_client(
 )
 returns table (
     user_id iam.users.id%type,
-    email iam.users.email%type
+    email iam.users.email%type,
+    active iam.user_clients.active%type
 )
 language plpgsql
 as $$
@@ -11,7 +12,8 @@ begin
     return query
     select
         a.user_id,
-        b.email
+        b.email,
+        a.active
     from iam.user_clients a
         join iam.users b
             on a.user_id = b.id
