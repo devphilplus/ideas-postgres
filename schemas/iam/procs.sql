@@ -15,3 +15,4 @@ set schema 'iam';
 
 \ir procs/user_clients/user_client_add.sql
 \ir procs/user_clients/user_client_set_active.sql
+\ir procs/user_clients/user_clients_by_client.sql
