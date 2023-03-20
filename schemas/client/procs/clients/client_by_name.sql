@@ -3,7 +3,7 @@ create function client_by_name(
 )
 returns table (
     id client.clients.id%type,
-    active clients.clients.active%type,
+    active client.clients.active%type,
     name client.clients.name%type
 )
 language plpgsql
@@ -20,3 +20,5 @@ begin
     ;
 end
 $$;
+
+comment on function client_by_name is 'retrieve client by name';
