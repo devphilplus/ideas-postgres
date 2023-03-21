@@ -19,7 +19,6 @@ begin
             on a.user_id = b.id
     where
         a.client_id = p_client_id
-        and a.active = true
         and b.active = true
     ;
 end
