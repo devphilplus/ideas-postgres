@@ -31,6 +31,10 @@ begin
         true
     );
 
+    call iam.create_default_roles_for_client(
+        test_client_id
+    );
+
     -- add people record
     call people.people_add(
         test_user_id,

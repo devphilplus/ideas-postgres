@@ -18,3 +18,5 @@ create table roles (
         foreign key (client_id)
         references client.clients (id)
 );
+
+comment on table roles is 'table of roles';
