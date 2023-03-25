@@ -2,22 +2,27 @@ create procedure init()
 language plpgsql
 as $$
 declare
-    test_client_id uuid;
+    test_tenant_id uuid;
     test_user_id uuid;
 begin
-    test_client_id := public.gen_random_uuid();
-    test_user_id := test_client_id;
+    test_tenant_id := public.gen_random_uuid();
+    test_user_id := test_tenant_id;
+    
+    call tenants.tenant_add(
+        test_tenant_id,
+        'test1',
+        'test1',
+        'test1 tenant'
 
-    call client.client_add(
-        test_client_id,
-        'test1',
-        'test1',
-        'test1 client'
     );
 
-    call client.client_set_active(
-        test_client_id,
+    call tenants.tenant_set_active(
+        test_tenant_id,
         true
+    );
+
+    call iam.create_default_roles_for_tenant(
+        test_tenant_id
     );
 
     call iam.user_add(
@@ -29,10 +34,6 @@ begin
     call iam.user_set_active(
         test_user_id,
         true
-    );
-
-    call iam.create_default_roles_for_client(
-        test_client_id
     );
 
     -- add people record
