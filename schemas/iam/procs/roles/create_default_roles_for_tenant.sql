@@ -1,5 +1,5 @@
-create procedure create_default_roles_for_client (
-    p_client_id client.clients.id%type
+create procedure create_default_roles_for_tenant (
+    p_tenant_id tenants.tenants.id%type
 )
 language plpgsql
 as $$
@@ -9,11 +9,11 @@ begin
     p_role_id := public.gen_random_uuid();
 
     call iam.role_add(
-        p_client_id,
+        p_tenant_id,
         p_role_id,
         'default',
         'default',
-        'default client role'
+        'default tenant role'
     );
 
     call iam.role_set_active(
@@ -23,4 +23,4 @@ begin
 end
 $$;
 
-comment on procedure create_default_roles_for_client is 'create default role for client';
+comment on procedure create_default_roles_for_tenant is 'create default role for tenant';

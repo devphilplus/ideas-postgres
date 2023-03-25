@@ -1,5 +1,5 @@
 create procedure role_add(
-    p_client_id iam.roles.client_id%type,
+    p_tenant_id iam.roles.tenant_id%type,
     p_id iam.roles.id%type,
     p_name iam.roles.name%type,
     p_slug iam.roles.slug%type,
@@ -10,13 +10,13 @@ as $$
 begin
     insert into iam.roles (
         id,
-        client_id,
+        tenant_id,
         name,
         slug,
         description
     ) values (
         p_id,
-        p_client_id,
+        p_tenant_id,
         p_name,
         p_slug,
         p_desc
