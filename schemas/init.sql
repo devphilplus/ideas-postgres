@@ -2,22 +2,22 @@ create procedure init()
 language plpgsql
 as $$
 declare
-    default_client_id uuid;
+    default_tenant_id uuid;
     admin_user_id uuid;
 begin
     -- create default client
-    default_client_id := public.gen_random_uuid();
-    admin_user_id := default_client_id;
+    default_tenant_id := public.gen_random_uuid();
+    admin_user_id := default_tenant_id;
 
-    call client.client_add(
-        default_client_id,
+    call tenants.tenant_add(
+        default_tenant_id,
         'default',
         'default',
-        'default client'
+        'default tenant'
     );
 
-    call client.client_set_active(
-        default_client_id,
+    call tenants.tenant_set_active(
+        default_tenant_id,
         true
     );
 

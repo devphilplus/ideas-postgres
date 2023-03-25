@@ -17,7 +17,3 @@ set schema 'iam';
 \ir procs/roles/role_add.sql
 \ir procs/roles/role_set_active.sql
 \ir procs/roles/create_default_roles_for_tenant.sql
-
-\ir procs/user_clients/user_client_add.sql
-\ir procs/user_clients/user_client_set_active.sql
-\ir procs/user_clients/user_clients_by_client.sql
