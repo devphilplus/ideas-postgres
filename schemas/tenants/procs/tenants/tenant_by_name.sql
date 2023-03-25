@@ -1,10 +1,10 @@
 create function tenant_by_name(
-    p_name tenants.tenant.name%type
+    p_name tenants.tenants.name%type
 )
 returns table (
-    id tenants.tenant.id%type,
-    active tenants.tenant.active%type,
-    name tenants.tenant.name%type
+    id tenants.tenants.id%type,
+    active tenants.tenants.active%type,
+    name tenants.tenants.name%type
 )
 language plpgsql
 as $$
@@ -14,7 +14,7 @@ begin
         a.id,
         a.active,
         a.name
-    from tenants.tenant a
+    from tenants.tenants a
     where
         a.name = p_name
     ;

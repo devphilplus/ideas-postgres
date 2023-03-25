@@ -1,13 +1,13 @@
 create procedure tenant_add(
-    p_tenant_id tenants.tenant.id%type,
-    p_name tenants.tenant.name%type,
-    p_slug tenants.tenant.slug%type,
-    p_desc tenants.tenant.description%type
+    p_tenant_id tenants.tenants.id%type,
+    p_name tenants.tenants.name%type,
+    p_slug tenants.tenants.slug%type,
+    p_desc tenants.tenants.description%type
 )
 language plpgsql
 as $$
 begin
-    insert into tenants.tenant (
+    insert into tenants.tenants (
         id,
         name,
         slug,
