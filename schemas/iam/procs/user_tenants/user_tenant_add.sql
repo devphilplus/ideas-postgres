@@ -5,7 +5,7 @@ create procedure user_tenant_add(
 language plpgsql
 as $$
 begin
-    insert into tenants.tenants (
+    insert into iam.user_tenants (
         user_id,
         tenant_id
     ) values (

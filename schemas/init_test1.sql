@@ -36,6 +36,18 @@ begin
         true
     );
 
+    -- add user to tenant
+    call iam.user_tenant_add(
+        test_user_id,
+        test_tenant_id
+    );
+
+    call iam.user_tenant_set_active(
+        test_user_id,
+        test_tenant_id,
+        true
+    );
+
     -- add people record
     call people.people_add(
         test_user_id,
