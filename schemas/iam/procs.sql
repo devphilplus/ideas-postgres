@@ -20,3 +20,4 @@ set schema 'iam';
 
 \ir procs/user_tenants/user_tenant_add.sql
 \ir procs/user_tenants/user_tenant_set_active.sql
+\ir procs/user_tenants/user_tenants_fetch.sql

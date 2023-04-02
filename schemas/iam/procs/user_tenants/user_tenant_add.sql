@@ -14,3 +14,5 @@ begin
     );
 end
 $$;
+
+comment on procedure user_tenant_add is 'add user to tenant';
