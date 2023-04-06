@@ -4,6 +4,7 @@ create table user_tenants (
     created timestamp with time zone not null default(now() at time zone 'utc'),
 
     tenant_id uuid not null,
+    is_default boolean not null default false,
 
     constraint pk_user_tenants
         primary key (user_id, tenant_id),
