@@ -4,7 +4,7 @@ create function user_tenants_fetch(
 returns table(
     user_id iam.users.id%type,
     email iam.users.email%type,
-    active iam.user_clients.active%type
+    active iam.user_tenants.active%type
 )
 language plpgsql
 as $$
