@@ -1,10 +1,10 @@
 create function user_tenants_fetch(
-    p_tenant_id iam.user_tenants.tenant_id%type
+    p_user_id iam.user_tenants.user_id%type
 )
 returns table(
-    user_id iam.users.id%type,
-    email iam.users.email%type,
-    active iam.user_tenants.active%type
+    id tenants.tenants.id%type,
+    active tenants.tenants.active%type,
+    name tenants.tenants.name%type
 )
 language plpgsql
 as $$
@@ -15,12 +15,12 @@ begin
         b.email,
         b.active
     from iam.user_tenants a
-        join iam.users b
-            on a.user_id = b.id
+        join tenants.tenants b
+            on a.tenant_id = b.id
     where
-        a.tenant_id = p_tenant_id
+        a.user_id = p_user_id
     ;
 end
 $$;
 
-comment on function user_tenants_fetch is 'retrieve users associated with tenant';
+comment on function user_tenants_fetch is 'retrieve tenants associated with a user';
