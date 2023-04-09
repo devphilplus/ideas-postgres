@@ -20,6 +20,7 @@ begin
             on a.id = b.tenant_id
     where
         b.user_id = p_user_id
+        and b.is_default = true
     ;
 end
 $$;
