@@ -68,14 +68,14 @@ begin
         true
     );
 
-    commit;
+    -- commit;
 
     exception
         when no_data_found then
-            rollback;
+            -- rollback;
             raise;
         when integrity_constraint_violation then
-            rollback;
+            -- rollback;
             raise;
 end
 $$;

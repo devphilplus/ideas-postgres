@@ -10,4 +10,4 @@ set schema 'tenants';
 \ir procs/tenants/tenant_by_id.sql
 \ir procs/tenants/tenant_by_name.sql
 \ir procs/tenants/tenants_fetch.sql
-\ir procs/tenants/tenants_default.sql
+\ir procs/tenants/tenant_default_fetch.sql
