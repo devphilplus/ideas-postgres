@@ -15,7 +15,7 @@ begin
         a.id,
         a.name,
         a.slug
-    from tenant.tenants a
+    from tenants.tenants a
         join iam.user_tenants b
             on a.id = b.tenant_id
     where
