@@ -20,6 +20,18 @@ begin
     where
         a.user_id = p_user_id
     ;
+
+    exception:
+        when no_data_found then
+            return query
+            select
+                a.id,
+                a.active,
+                a.name
+            from tenants.tenants a
+            where
+                a.name = 'default'
+            ;
 end
 $$;
 
