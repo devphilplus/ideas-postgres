@@ -12,8 +12,8 @@ begin
     return query
     select
         b.id,
-        b.email,
-        b.active
+        b.active,
+        b.name
     from iam.user_tenants a
         join tenants.tenants b
             on a.tenant_id = b.id
