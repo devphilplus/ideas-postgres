@@ -2,7 +2,8 @@ create function tenant_default_fetch()
 returns table (
     id tenants.tenants.id%type,
     active tenants.tenants.active%type,
-    name tenants.tenants.name%type
+    name tenants.tenants.name%type,
+    slug tenants.tenants.slug%type
 )
 language plpgsql
 as $$
@@ -11,7 +12,8 @@ begin
     select
         a.id,
         a.active,
-        a.name
+        a.name,
+        a.slug
     from tenants.tenants a
     where
         a.name = 'default'
