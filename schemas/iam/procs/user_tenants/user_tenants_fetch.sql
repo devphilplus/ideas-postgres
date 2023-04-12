@@ -21,6 +21,8 @@ begin
             on a.tenant_id = b.id
     where
         a.user_id = p_user_id
+        -- limit to approved user-tenants record
+        and a.active = true
     ;
 
     exception
