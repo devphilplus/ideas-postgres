@@ -3,6 +3,7 @@ create table people (
     active boolean not null default false,
     created timestamp with time zone not null default(now() at time zone 'utc'),
 
+    tenant_id uuid not null,
     given_name varchar(100) not null,
     middle_name varchar(100) not null,
     family_name varchar(100) not null,
@@ -16,5 +17,5 @@ create table people (
     constraint pk_people
         primary key (id),
     constraint u_people_1
-        unique (given_name, middle_name, family_name)
+        unique (tenant_id, given_name, middle_name, family_name)
 );

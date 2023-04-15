@@ -50,6 +50,7 @@ begin
 
     -- add people record
     call people.people_add(
+        test_tenant_id,
         test_user_id,
         'test',
         'test',

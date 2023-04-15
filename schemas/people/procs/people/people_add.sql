@@ -1,4 +1,5 @@
 create or replace procedure people_add (
+    p_tenant_id people.people.tenant_id%type,
     p_people_id people.people.id%type,
     p_given_name people.people.given_name%type,
     p_middle_name people.people.middle_name%type,
@@ -16,6 +17,7 @@ begin
         id,
         active,
         
+        tenant_id,
         given_name,
         middle_name,
         family_name,
@@ -29,6 +31,7 @@ begin
         p_people_id,
         true,
 
+        p_tenant_id,
         p_given_name,
         p_middle_name,
         p_family_name,
