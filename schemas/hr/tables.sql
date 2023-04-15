@@ -5,4 +5,4 @@ create schema hr;
 set schema 'hr';
 
 
-\ir tables/members.sql
+\ir tables/employees.sql
