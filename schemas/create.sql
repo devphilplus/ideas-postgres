@@ -4,6 +4,7 @@
 \ir iam/tables.sql
 \ir accounting/tables.sql
 \ir people/tables.sql
+\ir inventory/tables.sql
 
 
 
@@ -13,3 +14,4 @@
 \ir iam/procs.sql
 \ir accounting/procs.sql
 \ir people/procs.sql
+\ir inventory/procs.sql
