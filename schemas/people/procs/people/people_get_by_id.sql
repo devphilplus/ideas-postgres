@@ -11,9 +11,9 @@ returns table (
     suffix people.people.suffix%type,
     gender_id people.people.gender_id%type,
     ethnicity_id people.people.ethnicity_id%type,
-    marital_state_id people.people.marital_state_id%type
+    marital_status_id people.people.marital_status_id%type
 )
-language plpsql
+language plpgsql
 as $$
 begin
     return query
@@ -27,7 +27,7 @@ begin
         a.suffix,
         a.gender_id,
         a.ethnicity_id,
-        a.marital_state_id
+        a.marital_status_id
     from people.people a
     where
         a.id = p_people_id

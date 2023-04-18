@@ -10,7 +10,11 @@ create table employees (
         primary key (id),
 
     constraint u_employees_1
-        unique (tenant_id, people_id)
+        unique (tenant_id, people_id),
+
+    constraint fk_employees_1
+        foreign key (people_id)
+        references people.people (id)
 );
 
 comment on table employees is 'table of employees';
