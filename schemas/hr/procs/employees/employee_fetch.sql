@@ -4,7 +4,7 @@ create function employee_fetch(
 returns table (
     id hr.employees.id%type,
     active hr.employees.active%type,
-    people_id hr.emploees.people_id%type,
+    people_id hr.employees.people_id%type,
     given_name people.people.given_name%type,
     middle_name people.people.middle_name%type,
     family_name people.people.family_name%type,
@@ -12,7 +12,7 @@ returns table (
     suffix people.people.suffix%type,
     gender_id people.people.gender_id%type,
     ethnicity_id people.people.ethnicity_id%type,
-    marital_state_id people.people.marital_state_id%type
+    marital_status_id people.people.marital_status_id%type
 )
 language plpgsql
 as $$
@@ -29,7 +29,7 @@ begin
         b.suffix,
         b.gender_id,
         b.ethnicity_id,
-        b.marital_state_id
+        b.marital_status_id
     from hr.employees a
         join people.people b
             on a.people_id = b.id
