@@ -15,5 +15,6 @@ set schema 'tenants';
 
 \ir procs/organizations/organization_add.sql
 \ir procs/organizations/organization_set_active.sql
+\ir procs/organizations/organizations_fetch.sql
 
 \ir procs/org_tree/org_tree_add.sql

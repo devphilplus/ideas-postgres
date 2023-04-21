@@ -12,7 +12,7 @@ begin
         tenant_id,
         name,
         description
-    ) valeus (
+    ) values (
         p_organization_id,
         p_tenant_id,
         p_name,
