@@ -12,3 +12,8 @@ set schema 'tenants';
 \ir procs/tenants/tenant_by_slug.sql
 \ir procs/tenants/tenants_fetch.sql
 \ir procs/tenants/tenant_default_fetch.sql
+
+\ir procs/organizations/organization_add.sql
+\ir procs/organizations/organization_set_active.sql
+
+\ir procs/org_tree/org_tree_add.sql

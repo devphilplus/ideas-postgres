@@ -5,6 +5,7 @@
 \ir accounting/tables.sql
 \ir people/tables.sql
 \ir hr/tables.sql
+\ir work/tables.sql
 \ir inventory/tables.sql
 
 
@@ -16,4 +17,5 @@
 \ir accounting/procs.sql
 \ir people/procs.sql
 \ir hr/procs.sql
+\ir work/procs.sql
 \ir inventory/procs.sql
