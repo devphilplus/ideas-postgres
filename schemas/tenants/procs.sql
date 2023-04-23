@@ -18,3 +18,4 @@ set schema 'tenants';
 \ir procs/organizations/organizations_fetch.sql
 
 \ir procs/org_tree/org_tree_add.sql
+\ir procs/org_tree/org_tree_set_active.sql
