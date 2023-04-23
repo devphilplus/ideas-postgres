@@ -9,3 +9,4 @@ set schema 'accounting';
 \ir tables/accounts.sql
 \ir tables/accounts_scd.sql
 \ir tables/account_balances.sql
+\ir tables/account_tree.sql
