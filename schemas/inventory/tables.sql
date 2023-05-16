@@ -8,3 +8,4 @@ set schema 'inventory';
 \ir tables/items.sql
 \ir tables/item_locators.sql
 \ir tables/item_locations.sql
+\ir tables/item_expirations.sql

@@ -9,6 +9,8 @@ create table items (
 
     upc varchar(100),
     sku varchar(100),
+
+    perishable boolean,
     
     constraint pk_items
         primary key (id),

@@ -1,6 +1,5 @@
 create table item_locations (
     id uuid not null,
-    active boolean not null default false,
     created timestamp with time zone not null default(now() at time zone 'utc'),
 
     tenant_id uuid not null,

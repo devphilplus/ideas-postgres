@@ -8,9 +8,10 @@ create table item_locators (
 
     floor varchar(10),
     level varchar(10),
+    aisle varchar(10),
     shelf varchar(10),
+    row varchar(10),
     bin varchar(10),
-
 
     constraint pk_item_locators
         primary key (id),
