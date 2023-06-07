@@ -1,4 +1,5 @@
 create database eas;
+\c eas
 
 create extension if not exists pgcrypto;
 
